@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./head.ejs')%>
+</head>
+<body>
+    <a class="back" href="/show/<%= product._id %>">Back</a>
+    <div class="container">
+        <h1>Edit</h1>
+        <form action="/edit/<%= product._id %>?_method=PUT" method="post">
+        <label for="name">Product Name</label>
+        <input type="text" name="name" value="<%= product.name %>">
+        <label for="img">Image Link</label>
+        <input type="text" name="img" value="<%= product.img %>">
+        <label for="qty">Quantity</label>
+        <input type="text" name="qty" value="<%= product.qty %>">
+        <label for="price">Price ($)</label>
+        <input type="text" name="price" value="<%= product.price %>"><br>
+        <input class="edit" type="submit" value="Edit">
+        </form>
+    </div>
+</body>
+</html>

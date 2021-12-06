@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./head.ejs')%>
+</head>
+<body>
+    <a class="back" href="/store">Back</a>
+    <div class="container">
+        <h1>Add New Product</h1>
+        <form action="/new" method="post">
+        <label for="name">Product Name</label>
+        <input type="text" name="name" >
+        <label for="img">Image Link</label>
+        <input type="text" name="img">
+        <label for="qty">Quantity</label>
+        <input type="text" name="qty">
+        <label for="price">Price ($)</label>
+        <input type="text" name="price"><br>
+        <input class="edit" type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

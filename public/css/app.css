@@ -1,0 +1,83 @@
+.container {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div.card {
+  text-align: center;
+  width: 200px;
+  height: 290px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px black solid;
+  border-radius: 15px;
+}
+
+img.card {
+  height: 200px;
+  width: 200px;
+  object-fit: fill;
+}
+
+button.product {
+  width: 200px;
+  height: 200px;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+h5.card {
+  margin: 0;
+}
+
+h6.card {
+  margin: 0;
+}
+
+img.show {
+  height: 250px;
+  width: 250px;
+}
+
+a.back {
+  padding: 20px;
+  font-size: 20px;
+}
+
+div.buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+button.show {
+  width: 100px;
+  font-size: 12px;
+  padding: 0;
+}
+
+button.buy {
+  border: 1px #1eaedb solid;
+  color: #1eaedb;
+}
+
+input.edit {
+  border: 1px #1eaedb solid;
+  color: #1eaedb;
+  margin-top: 20px;
+}
+
+form.button {
+  margin: 0;
+  border: none;
+  margin-bottom: 10px;
+}
+
+.ooo {
+  color: rgb(184, 9, 9);
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./head.ejs')%>
+</head>
+<body>
+    <a class="back" href="/store">Back</a>
+    <div class="container">
+        <h1><%= product.name %></h1>
+        <img class="show" src="<%= product.img %>" alt="<%= product.name %>">
+        <p><%= product.description %></p>
+        <% if(product.qty>0){ %> 
+        <h4>Quantity: <%= product.qty %></h4>
+        <% }else{ %>
+        <h4 class="ooo">Out of Stock</h4>
+        <% } %> 
+        <h4>$ <%= product.price %></h4>
+        <div class="buttons">
+        <% if(product.qty>0){ %> 
+        <form class="button" action="/buy/<%= product._id %>?_method=PATCH" method="post" >
+            <button class="show buy">Buy</button>
+        </form>
+        <% }else{} %>
+        <a href="/edit/<%= product._id %>"><button class="show edit">Edit</button></a>
+        <form class="button" action="/delete/<%= product._id %>?_method=DELETE" method="post" >
+            <button class="show">Delete</button>
+        </form>
+        </div>
+    </div>
+</body>
+</html>

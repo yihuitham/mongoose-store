@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./head.ejs')%>
+</head>
+<body>
+    <div class="container">
+    <h1>Mongoose Store</h1>
+    <a href="/new"><button>Add new product</button></a>
+    <div class="main">
+    <% for(let i=0; i<products.length; i++) { %>
+        <div class="card">
+        <h5 class="card"><%= products[i].name%></h5>
+        <a href="/show/<%= products[i]._id %>"><button class="product"><img class="card" src="<%= products[i].img %>" alt="<%= products[i].name%>"></button></a>
+        <h6 class="card">Quantity: <%= products[i].qty%></h6>
+        <h6 class="card">$ <%= products[i].price%></h6>
+        </div>
+    <% } %>
+    </div>
+    </div>
+</body>
+</html>
